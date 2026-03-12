@@ -1,0 +1,118 @@
+# FiFTy 学習スクリプトのハイパーパラメータ設定ファイル
+# モデルの種類（複数選択可能）
+# type: ["cnn", "gru", "lstm", "transformer"]
+type: ["cnn"]
+experiment:
+  seed: 42
+  device: "gpu" # cpu / gpu / auto が指定可能（gpu は cuda と同義）
+  # ローカルの場合の出力先のルートディレクトリ指定の例
+  #   相対パスの場合はリポジトリ直下
+  #   experiment.result_dir/type/ の下にディレクトリが作られる
+  result_dir: "result"
+  # Colab で Google Drive を使う例（/content/drive/MyDrive にある任意の保存先に置換）
+  # result_dir: "/content/drive/MyDrive/fifty-nlp/result"
+
+  # 中断から再開する場合の設定
+  resume_from: null # 無効化の場合
+  # run_dir またはチェックポイント(.pt)を指定する
+  # 相対パスで指定した場合は、result_dir からの相対パスになる
+  # resume_from: "CNN/2025-10-15_16-41-33_f2023d3/"
+
+  interpretability:
+    enable: false
+    split: "val" # train / val / test
+    interval: 1 # 何エポックごとに特徴マップを出力するか
+    num_samples: 1
+    # indices: [0, 42, 128]  # 特定サンプルを指定したい場合（省略時は先頭から）
+data: # データセットのパス周り
+  splits: ["train", "val", "test"]
+  base_dir: "~/dataset/" # ローカルのディレクトリを使う例
+  # base_dir: "/content/drive/MyDrive/fifty-nlp/dataset/" # Drive をマウントして使う例
+model: # common 配下は全モデルに適用され、各モデル固有設定で上書き可能
+  # embed_dim:         埋め込み次元数（バイト値をベクトル化する際の出力次元数）
+  # hidden_dim:        全結合中間層のユニット数（畳み込み後特徴ベクトルを写像する次元）
+  # dropout:           ドロップアウト率（過学習防止にノードをランダムに無効化する確率）
+  # embedding_dropout: 埋め込み出力直後に適用するロックドドロップアウト率
+  # layernorm:         特徴ベクトルに LayerNorm を適用するか
+  # num_layers:        RNN のスタック層数（RNN 系のみ）
+  # bidirectional:     双方向 RNN を用いるか（RNN 系のみ）
+  common:
+    embed_dim: 64
+    # hidden_dim: 256 # パラメータ規模 ±0.5% 以内にするため、各モデルごとに調整
+    dropout: 0.1 # 旧式: 0.3
+    embedding_dropout: 0.0 # 旧式: 0.2
+    layernorm: false
+  cnn:
+    # FiFty の 512-byte Scenario #1 (All Classes 75) の最終モデル TABLE II を参考
+    # E(64), C1D (128, 27) の 128, C1D (128, 27) の 27, MP(4), D(0.1), 256
+    #   - Global Average Pooling（GAP）で時系列長を1に集約
+    #   - 全結合層:     256ユニット → 出力クラス数(75)
+    #   - 平均精度:     77.5%
+    # AP(Adaptive Average Pooling) と 75クラスへの出力をする最終全結合 F(75) はコード中
+    conv_channels: 128 # 1D畳み込み層の出力チャネル数: 特徴マップの数。表現力に影響
+    kernel_size: 27 # 畳み込みカーネル幅: 受容野の幅。局所的なバイトパターン検出の範囲
+    pool_size: 4 # プーリングサイズ: ダウンサンプリング率。計算量と情報保持のバランス
+    num_blocks: 1 # 畳み込みブロック数: Conv → ReLU → Pool を繰り返す回数
+    hidden_dim: 256 # パラメータ規模: 289,995
+  gru:
+    num_layers: 2
+    bidirectional: true
+    hidden_dim: 96 # パラメータ規模: 291,211
+  lstm:
+    num_layers: 2
+    bidirectional: true
+    hidden_dim: 82 # パラメータ規模: 288,535
+  transformer:
+    num_layers: 5
+    num_heads: 4
+    ffn_dim: 256
+    hidden_dim: 168 # パラメータ規模: 289,963
+training: # 学習設定（典型的なステップ順）
+  # batch_size: バッチサイズ: １ステップでネットワークに入力して処理するサンプル数
+  # epochs:     エポック数:   全データセットを何周学習するか。過学習注意
+  # lr:         学習率:       モデルパラメータ更新時の学習の速さ。大: 発散、小: 遅収束
+  # n_subset:   サブセットサイズ: 学習データのサンプル数を制限する。最大 6_144_000
+  # eta_min:    最小学習率: 学習率スケジューラ CosineAnnealingLR の最小値
+  # ---
+  # DataLoader の設定は固定
+  common:
+    batch_size: 128
+    epochs: 48
+    lr: 1.0e-3
+    phase: "final" # phase: search / final (search は validation を割合サブセットで評価)
+    optimizer: "rmsprop" # adam / adamw / rmsprop
+    scheduler: "cosine" # cosine / none
+    warmup_epochs: 0 # 0 で無効化
+    warmup_start_factor: 0.1
+    weight_decay: 0.0
+    clip_grad_norm: null
+    label_smoothing: 0.0
+    debug_cuda_sync: false # true で CUDA 同期点をれて落ちる位置を特定
+    amp: false # true で AMP を有効化（各モデルで上書き可）
+    n_subset: 737_280 # 12%
+    # n_subset: 6_144_000 # 100%
+    eta_min: 1.0e-7
+    val_interval: 1
+    # validation の評価範囲制御
+    val_max_batches: null # None で無効化
+    val_subset_ratio: null # search フェーズなら未指定時に 0.4 が適用される
+    val_subset_seed: 42
+    early_stopping:
+      enable: false
+      metric: "val_acc" # val_acc / val_loss / val_macro_f1
+      mode: "max" # metric が良いとされる値（acc なら max, loss なら min）: max / min
+      patience: 8
+      min_delta: 0.0006 # 良いとされる値からどれくらい良くなっている必要があるか 0.06 pt
+      restore_best: true
+  cnn:
+    # lr: 6.0e-4 # 探索結果 2026-01-27_17-24-55, 0.0006
+    amp: true
+  gru:
+    # lr: 1.0e-3
+    amp: true
+  lstm:
+    # lr: 1.0e-3
+    amp: true
+  transformer:
+    # lr: 1.0e-3
+    amp: true

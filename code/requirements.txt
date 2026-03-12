@@ -1,0 +1,21 @@
+# Core scientific packages
+numpy==2.3.3
+PyYAML==6.0.2
+
+# Stable PyTorch stack (CUDA 12.1)
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+torchaudio==2.5.1
+
+# Model introspection / visualization
+torchinfo==1.8.0
+torchview==0.2.7
+
+# Visualization
+pandas==2.3.0
+matplotlib==3.9.2
+# japanize-matplotlib==1.1.3
+
+# Install from official PyTorch CUDA wheels
+--extra-index-url https://download.pytorch.org/whl/cu121
+
