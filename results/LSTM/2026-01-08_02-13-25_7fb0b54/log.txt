@@ -1,0 +1,573 @@
+2026-01-08 02:13:25 __main__ INFO: config.type: lstm
+2026-01-08 02:13:25 __main__ INFO: 
+device: cuda (cuda)
+2026-01-08 02:13:25 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-08 02:13:25 config.training_config INFO: batch_size: 128
+2026-01-08 02:13:25 config.training_config INFO: epochs: 48
+2026-01-08 02:13:25 config.training_config INFO: lr: 0.0001
+2026-01-08 02:13:25 config.training_config INFO: optimizer: adamw
+2026-01-08 02:13:25 config.training_config INFO: warmup_epochs: 3
+2026-01-08 02:13:25 config.training_config INFO: warmup_start_factor: 0.1
+2026-01-08 02:13:25 config.training_config INFO: n_classes: 75
+2026-01-08 02:13:25 config.training_config INFO: n_subset: 6144000
+2026-01-08 02:13:25 config.training_config INFO: eta_min: 1e-07
+2026-01-08 02:13:25 config.training_config INFO: val_interval: 1
+2026-01-08 02:13:25 config.training_config INFO: weight_decay: 1e-06
+2026-01-08 02:13:25 config.training_config INFO: clip_grad_norm: 0.5
+2026-01-08 02:13:25 config.training_config INFO: label_smoothing: 0.01
+2026-01-08 02:13:25 config.training_config INFO: early_stopping: metric=val_loss mode=min patience=6 restore_best=True
+2026-01-08 02:13:25 __main__ INFO: n_subset: 6144000
+2026-01-08 02:13:25 __main__ INFO: parameter_scale: 288535
+2026-01-08 02:13:25 __main__ INFO: trainable_parameters: 288535
+2026-01-08 02:13:28 src.training.training_loop INFO: Epoch 1:progress 0% (batch 1/48000)
+2026-01-08 02:15:18 src.training.training_loop INFO: Epoch 1:progress 10% (batch 4801/48000)
+2026-01-08 02:17:13 src.training.training_loop INFO: Epoch 1:progress 20% (batch 9601/48000)
+2026-01-08 02:19:08 src.training.training_loop INFO: Epoch 1:progress 30% (batch 14401/48000)
+2026-01-08 02:21:03 src.training.training_loop INFO: Epoch 1:progress 40% (batch 19201/48000)
+2026-01-08 02:22:58 src.training.training_loop INFO: Epoch 1:progress 50% (batch 24001/48000)
+2026-01-08 02:24:53 src.training.training_loop INFO: Epoch 1:progress 60% (batch 28801/48000)
+2026-01-08 02:26:47 src.training.training_loop INFO: Epoch 1:progress 70% (batch 33601/48000)
+2026-01-08 02:28:42 src.training.training_loop INFO: Epoch 1:progress 80% (batch 38401/48000)
+2026-01-08 02:30:37 src.training.training_loop INFO: Epoch 1:progress 90% (batch 43201/48000)
+2026-01-08 02:32:32 src.training.training_loop INFO: Epoch 1: train_loss=3.4217, train_acc=0.1399, train_acc_top3=0.2721, lr=1e-05
+2026-01-08 02:32:35 src.training.training_loop INFO: Epoch 1: Validation: batches=300, samples=38400, val_loss=3.0486, val_acc=0.216, acc_top3=0.367, macro_f1=0.178
+2026-01-08 02:32:35 src.training.training_loop INFO: Early stopping metric 'val_loss' initialized at 3.0486 (epoch 1)
+2026-01-08 02:32:35 src.training.training_loop INFO: Epoch 1: done!
+2026-01-08 02:32:35 src.training.training_loop INFO: Epoch 1: checkpoint saved
+2026-01-08 02:51:46 src.training.training_loop INFO: Epoch 2: train_loss=2.8595, train_acc=0.2711, train_acc_top3=0.4135, lr=4e-05
+2026-01-08 02:51:48 src.training.training_loop INFO: Epoch 2: Validation: batches=300, samples=38400, val_loss=2.5515, val_acc=0.339, acc_top3=0.475, macro_f1=0.317
+2026-01-08 02:51:48 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 3.0486 to 2.5515 (epoch 2)
+2026-01-08 02:51:48 src.training.training_loop INFO: Epoch 2: done!
+2026-01-08 02:51:48 src.training.training_loop INFO: Epoch 2: checkpoint saved
+2026-01-08 03:11:00 src.training.training_loop INFO: Epoch 3: train_loss=2.4208, train_acc=0.3849, train_acc_top3=0.5172, lr=7e-05
+2026-01-08 03:11:03 src.training.training_loop INFO: Epoch 3: Validation: batches=300, samples=38400, val_loss=2.1796, val_acc=0.432, acc_top3=0.558, macro_f1=0.416
+2026-01-08 03:11:03 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 2.5515 to 2.1796 (epoch 3)
+2026-01-08 03:11:03 src.training.training_loop INFO: Epoch 3: done!
+2026-01-08 03:11:03 src.training.training_loop INFO: Epoch 3: checkpoint saved
+2026-01-08 03:30:16 src.training.training_loop INFO: Epoch 4: train_loss=2.0315, train_acc=0.4793, train_acc_top3=0.6018, lr=0.0001
+2026-01-08 03:30:19 src.training.training_loop INFO: Epoch 4: Validation: batches=300, samples=38400, val_loss=1.7597, val_acc=0.528, acc_top3=0.647, macro_f1=0.514
+2026-01-08 03:30:19 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 2.1796 to 1.7597 (epoch 4)
+2026-01-08 03:30:19 src.training.training_loop INFO: Epoch 4: done!
+2026-01-08 03:30:19 src.training.training_loop INFO: Epoch 4: checkpoint saved
+2026-01-08 03:49:35 src.training.training_loop INFO: Epoch 5: train_loss=1.7558, train_acc=0.5455, train_acc_top3=0.6567, lr=9.98783e-05
+2026-01-08 03:49:37 src.training.training_loop INFO: Epoch 5: Validation: batches=300, samples=38400, val_loss=1.6006, val_acc=0.566, acc_top3=0.673, macro_f1=0.553
+2026-01-08 03:49:37 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.7597 to 1.6006 (epoch 5)
+2026-01-08 03:49:37 src.training.training_loop INFO: Epoch 5: done!
+2026-01-08 03:49:37 src.training.training_loop INFO: Epoch 5: checkpoint saved
+2026-01-08 04:08:52 src.training.training_loop INFO: Epoch 6: train_loss=1.6308, train_acc=0.5764, train_acc_top3=0.6800, lr=9.95139e-05
+2026-01-08 04:08:54 src.training.training_loop INFO: Epoch 6: Validation: batches=300, samples=38400, val_loss=1.4971, val_acc=0.591, acc_top3=0.692, macro_f1=0.579
+2026-01-08 04:08:54 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.6006 to 1.4971 (epoch 6)
+2026-01-08 04:08:54 src.training.training_loop INFO: Epoch 6: done!
+2026-01-08 04:08:54 src.training.training_loop INFO: Epoch 6: checkpoint saved
+2026-01-08 04:28:07 src.training.training_loop INFO: Epoch 7: train_loss=1.5511, train_acc=0.5960, train_acc_top3=0.6948, lr=9.89085e-05
+2026-01-08 04:28:10 src.training.training_loop INFO: Epoch 7: Validation: batches=300, samples=38400, val_loss=1.4294, val_acc=0.608, acc_top3=0.705, macro_f1=0.594
+2026-01-08 04:28:10 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.4971 to 1.4294 (epoch 7)
+2026-01-08 04:28:10 src.training.training_loop INFO: Epoch 7: done!
+2026-01-08 04:28:10 src.training.training_loop INFO: Epoch 7: checkpoint saved
+2026-01-08 04:47:23 src.training.training_loop INFO: Epoch 8: train_loss=1.4947, train_acc=0.6099, train_acc_top3=0.7054, lr=9.8065e-05
+2026-01-08 04:47:26 src.training.training_loop INFO: Epoch 8: Validation: batches=300, samples=38400, val_loss=1.3762, val_acc=0.619, acc_top3=0.715, macro_f1=0.613
+2026-01-08 04:47:26 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.4294 to 1.3762 (epoch 8)
+2026-01-08 04:47:26 src.training.training_loop INFO: Epoch 8: done!
+2026-01-08 04:47:26 src.training.training_loop INFO: Epoch 8: checkpoint saved
+2026-01-08 05:06:38 src.training.training_loop INFO: Epoch 9: train_loss=1.4480, train_acc=0.6213, train_acc_top3=0.7140, lr=9.69876e-05
+2026-01-08 05:06:41 src.training.training_loop INFO: Epoch 9: Validation: batches=300, samples=38400, val_loss=1.3360, val_acc=0.629, acc_top3=0.723, macro_f1=0.622
+2026-01-08 05:06:41 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.3762 to 1.3360 (epoch 9)
+2026-01-08 05:06:41 src.training.training_loop INFO: Epoch 9: done!
+2026-01-08 05:06:41 src.training.training_loop INFO: Epoch 9: checkpoint saved
+2026-01-08 05:25:54 src.training.training_loop INFO: Epoch 10: train_loss=1.4114, train_acc=0.6300, train_acc_top3=0.7210, lr=9.56816e-05
+2026-01-08 05:25:56 src.training.training_loop INFO: Epoch 10: Validation: batches=300, samples=38400, val_loss=1.3042, val_acc=0.636, acc_top3=0.727, macro_f1=0.631
+2026-01-08 05:25:56 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.3360 to 1.3042 (epoch 10)
+2026-01-08 05:25:56 src.training.training_loop INFO: Epoch 10: done!
+2026-01-08 05:25:56 src.training.training_loop INFO: Epoch 10: checkpoint saved
+2026-01-08 05:45:08 src.training.training_loop INFO: Epoch 11: train_loss=1.3824, train_acc=0.6367, train_acc_top3=0.7265, lr=9.41532e-05
+2026-01-08 05:45:11 src.training.training_loop INFO: Epoch 11: Validation: batches=300, samples=38400, val_loss=1.2789, val_acc=0.643, acc_top3=0.732, macro_f1=0.640
+2026-01-08 05:45:11 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.3042 to 1.2789 (epoch 11)
+2026-01-08 05:45:11 src.training.training_loop INFO: Epoch 11: done!
+2026-01-08 05:45:11 src.training.training_loop INFO: Epoch 11: checkpoint saved
+2026-01-08 06:04:23 src.training.training_loop INFO: Epoch 12: train_loss=1.3604, train_acc=0.6420, train_acc_top3=0.7307, lr=9.241e-05
+2026-01-08 06:04:26 src.training.training_loop INFO: Epoch 12: Validation: batches=300, samples=38400, val_loss=1.2532, val_acc=0.649, acc_top3=0.737, macro_f1=0.643
+2026-01-08 06:04:26 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2789 to 1.2532 (epoch 12)
+2026-01-08 06:04:26 src.training.training_loop INFO: Epoch 12: done!
+2026-01-08 06:04:26 src.training.training_loop INFO: Epoch 12: checkpoint saved
+2026-01-08 06:23:38 src.training.training_loop INFO: Epoch 13: train_loss=1.3422, train_acc=0.6464, train_acc_top3=0.7342, lr=9.04604e-05
+2026-01-08 06:23:41 src.training.training_loop INFO: Epoch 13: Validation: batches=300, samples=38400, val_loss=1.2479, val_acc=0.650, acc_top3=0.737, macro_f1=0.648
+2026-01-08 06:23:41 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2532 to 1.2479 (epoch 13)
+2026-01-08 06:23:41 src.training.training_loop INFO: Epoch 13: done!
+2026-01-08 06:23:41 src.training.training_loop INFO: Epoch 13: checkpoint saved
+2026-01-08 06:42:53 src.training.training_loop INFO: Epoch 14: train_loss=1.3275, train_acc=0.6499, train_acc_top3=0.7372, lr=8.83139e-05
+2026-01-08 06:42:56 src.training.training_loop INFO: Epoch 14: Validation: batches=300, samples=38400, val_loss=1.2451, val_acc=0.651, acc_top3=0.737, macro_f1=0.648
+2026-01-08 06:42:56 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2479 to 1.2451 (epoch 14)
+2026-01-08 06:42:56 src.training.training_loop INFO: Epoch 14: done!
+2026-01-08 06:42:56 src.training.training_loop INFO: Epoch 14: checkpoint saved
+2026-01-08 07:02:08 src.training.training_loop INFO: Epoch 15: train_loss=1.3150, train_acc=0.6530, train_acc_top3=0.7397, lr=8.5981e-05
+2026-01-08 07:02:11 src.training.training_loop INFO: Epoch 15: Validation: batches=300, samples=38400, val_loss=1.2177, val_acc=0.656, acc_top3=0.744, macro_f1=0.652
+2026-01-08 07:02:11 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2451 to 1.2177 (epoch 15)
+2026-01-08 07:02:11 src.training.training_loop INFO: Epoch 15: done!
+2026-01-08 07:02:11 src.training.training_loop INFO: Epoch 15: checkpoint saved
+2026-01-08 07:21:24 src.training.training_loop INFO: Epoch 16: train_loss=1.3044, train_acc=0.6556, train_acc_top3=0.7418, lr=8.34731e-05
+2026-01-08 07:21:27 src.training.training_loop INFO: Epoch 16: Validation: batches=300, samples=38400, val_loss=1.2056, val_acc=0.660, acc_top3=0.745, macro_f1=0.655
+2026-01-08 07:21:27 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2177 to 1.2056 (epoch 16)
+2026-01-08 07:21:27 src.training.training_loop INFO: Epoch 16: done!
+2026-01-08 07:21:27 src.training.training_loop INFO: Epoch 16: checkpoint saved
+2026-01-08 07:40:39 src.training.training_loop INFO: Epoch 17: train_loss=1.2949, train_acc=0.6579, train_acc_top3=0.7435, lr=8.08023e-05
+2026-01-08 07:40:41 src.training.training_loop INFO: Epoch 17: Validation: batches=300, samples=38400, val_loss=1.2035, val_acc=0.660, acc_top3=0.745, macro_f1=0.656
+2026-01-08 07:40:41 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2056 to 1.2035 (epoch 17)
+2026-01-08 07:40:41 src.training.training_loop INFO: Epoch 17: done!
+2026-01-08 07:40:41 src.training.training_loop INFO: Epoch 17: checkpoint saved
+2026-01-08 07:59:54 src.training.training_loop INFO: Epoch 18: train_loss=1.2864, train_acc=0.6600, train_acc_top3=0.7454, lr=7.79817e-05
+2026-01-08 07:59:57 src.training.training_loop INFO: Epoch 18: Validation: batches=300, samples=38400, val_loss=1.1912, val_acc=0.662, acc_top3=0.748, macro_f1=0.657
+2026-01-08 07:59:57 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.2035 to 1.1912 (epoch 18)
+2026-01-08 07:59:57 src.training.training_loop INFO: Epoch 18: done!
+2026-01-08 07:59:57 src.training.training_loop INFO: Epoch 18: checkpoint saved
+2026-01-08 08:19:10 src.training.training_loop INFO: Epoch 19: train_loss=1.2788, train_acc=0.6619, train_acc_top3=0.7468, lr=7.5025e-05
+2026-01-08 08:19:12 src.training.training_loop INFO: Epoch 19: Validation: batches=300, samples=38400, val_loss=1.1901, val_acc=0.663, acc_top3=0.749, macro_f1=0.658
+2026-01-08 08:19:12 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1912 to 1.1901 (epoch 19)
+2026-01-08 08:19:12 src.training.training_loop INFO: Epoch 19: done!
+2026-01-08 08:19:12 src.training.training_loop INFO: Epoch 19: checkpoint saved
+2026-01-08 08:20:26 __main__ ERROR: Fatal error occurred: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Traceback (most recent call last):
+  File "/home/kata/fifty-nlp/src/main.py", line 1962, in <module>
+    main(device=resolved_device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1949, in main
+    run_single_experiment(run_type, device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1846, in run_single_experiment
+    run_training_loop(
+  File "/home/kata/fifty-nlp/src/training/training_loop.py", line 631, in run_training_loop
+    train_metrics = _train_single_epoch(
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/src/training/training_loop.py", line 189, in _train_single_epoch
+    scaler.step(optimizer)
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/torch/amp/grad_scaler.py", line 457, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/torch/amp/grad_scaler.py", line 351, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/torch/amp/grad_scaler.py", line 351, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+               ^^^^^^^^
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-01-08 08:20:27 __main__ INFO: summarize_results.py stdout:
+✅ 集計結果を /home/kata/fifty-nlp/result/summary_results.csv に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_accuracy.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_loss.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_lr.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_top3.png に出力しました。
+2026-01-08 09:14:25 __main__ INFO: config.type: lstm
+2026-01-08 09:14:25 __main__ INFO: 
+device: cuda (cuda)
+2026-01-08 09:14:25 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-08 09:14:25 __main__ INFO: resume_checkpoint: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54/log.txt
+2026-01-08 09:14:25 __main__ ERROR: Fatal error occurred: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: Unsupported operand 50
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+Traceback (most recent call last):
+  File "/home/kata/fifty-nlp/src/main.py", line 1962, in <module>
+    main(device=resolved_device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1949, in main
+    run_single_experiment(run_type, device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1781, in run_single_experiment
+    resume_state = load_resume_state(
+                   ^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/src/main.py", line 297, in load_resume_state
+    checkpoint_data = torch.load(
+                      ^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/torch/serialization.py", line 1383, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: Unsupported operand 50
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-01-08 09:14:27 __main__ INFO: summarize_results.py stdout:
+✅ 集計結果を /home/kata/fifty-nlp/result/summary_results.csv に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_accuracy.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_loss.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_lr.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_top3.png に出力しました。
+2026-01-08 09:20:05 __main__ INFO: config.type: lstm
+2026-01-08 09:20:05 __main__ INFO: 
+device: cuda (cuda)
+2026-01-08 09:20:05 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-08 09:20:05 __main__ INFO: resume_checkpoint: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54/checkpoint_latest.pt
+2026-01-08 09:20:05 __main__ INFO: Resuming from epoch 19(checkpoint saved at 2026-01-08T08:19:12)
+2026-01-08 09:20:05 config.training_config INFO: batch_size: 128
+2026-01-08 09:20:05 config.training_config INFO: epochs: 48
+2026-01-08 09:20:05 config.training_config INFO: lr: 0.0001
+2026-01-08 09:20:05 config.training_config INFO: optimizer: adamw
+2026-01-08 09:20:05 config.training_config INFO: warmup_epochs: 3
+2026-01-08 09:20:05 config.training_config INFO: warmup_start_factor: 0.1
+2026-01-08 09:20:05 config.training_config INFO: n_classes: 75
+2026-01-08 09:20:05 config.training_config INFO: n_subset: 6144000
+2026-01-08 09:20:05 config.training_config INFO: eta_min: 1e-07
+2026-01-08 09:20:05 config.training_config INFO: val_interval: 1
+2026-01-08 09:20:05 config.training_config INFO: weight_decay: 1e-06
+2026-01-08 09:20:05 config.training_config INFO: clip_grad_norm: 0.5
+2026-01-08 09:20:05 config.training_config INFO: label_smoothing: 0.01
+2026-01-08 09:20:05 config.training_config INFO: early_stopping: metric=val_loss mode=min patience=6 restore_best=True
+2026-01-08 09:20:05 __main__ INFO: n_subset: 6144000
+2026-01-08 09:20:05 __main__ INFO: parameter_scale: 288535
+2026-01-08 09:20:05 __main__ INFO: trainable_parameters: 288535
+2026-01-08 09:20:08 src.training.training_loop INFO: Epoch 20:progress 0% (batch 1/48000)
+2026-01-08 09:22:04 src.training.training_loop INFO: Epoch 20:progress 10% (batch 4801/48000)
+2026-01-08 09:24:00 src.training.training_loop INFO: Epoch 20:progress 20% (batch 9601/48000)
+2026-01-08 09:25:57 src.training.training_loop INFO: Epoch 20:progress 30% (batch 14401/48000)
+2026-01-08 09:27:54 src.training.training_loop INFO: Epoch 20:progress 40% (batch 19201/48000)
+2026-01-08 09:29:52 src.training.training_loop INFO: Epoch 20:progress 50% (batch 24001/48000)
+2026-01-08 09:31:51 src.training.training_loop INFO: Epoch 20:progress 60% (batch 28801/48000)
+2026-01-08 09:33:50 src.training.training_loop INFO: Epoch 20:progress 70% (batch 33601/48000)
+2026-01-08 09:35:49 src.training.training_loop INFO: Epoch 20:progress 80% (batch 38401/48000)
+2026-01-08 09:37:48 src.training.training_loop INFO: Epoch 20:progress 90% (batch 43201/48000)
+2026-01-08 09:39:46 src.training.training_loop INFO: Epoch 20: train_loss=1.2719, train_acc=0.6636, train_acc_top3=0.7483, lr=7.19466e-05
+2026-01-08 09:39:49 src.training.training_loop INFO: Epoch 20: Validation: batches=300, samples=38400, val_loss=1.1793, val_acc=0.665, acc_top3=0.752, macro_f1=0.660
+2026-01-08 09:39:49 src.training.training_loop INFO: Early stopping metric 'val_loss' initialized at 1.1793 (epoch 20)
+2026-01-08 09:39:49 src.training.training_loop INFO: Epoch 20: done!
+2026-01-08 09:39:49 src.training.training_loop INFO: Epoch 20: checkpoint saved
+2026-01-08 09:59:42 src.training.training_loop INFO: Epoch 21: train_loss=1.2657, train_acc=0.6651, train_acc_top3=0.7497, lr=6.87616e-05
+2026-01-08 09:59:44 src.training.training_loop INFO: Epoch 21: Validation: batches=300, samples=38400, val_loss=1.1774, val_acc=0.666, acc_top3=0.751, macro_f1=0.664
+2026-01-08 09:59:44 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1793 to 1.1774 (epoch 21)
+2026-01-08 09:59:44 src.training.training_loop INFO: Epoch 21: done!
+2026-01-08 09:59:44 src.training.training_loop INFO: Epoch 21: checkpoint saved
+2026-01-08 10:19:42 src.training.training_loop INFO: Epoch 22: train_loss=1.2599, train_acc=0.6666, train_acc_top3=0.7508, lr=6.54854e-05
+2026-01-08 10:19:44 src.training.training_loop INFO: Epoch 22: Validation: batches=300, samples=38400, val_loss=1.1695, val_acc=0.669, acc_top3=0.752, macro_f1=0.663
+2026-01-08 10:19:44 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1774 to 1.1695 (epoch 22)
+2026-01-08 10:19:44 src.training.training_loop INFO: Epoch 22: done!
+2026-01-08 10:19:44 src.training.training_loop INFO: Epoch 22: checkpoint saved
+2026-01-08 10:39:44 src.training.training_loop INFO: Epoch 23: train_loss=1.2546, train_acc=0.6679, train_acc_top3=0.7519, lr=6.2134e-05
+2026-01-08 10:39:47 src.training.training_loop INFO: Epoch 23: Validation: batches=300, samples=38400, val_loss=1.1630, val_acc=0.669, acc_top3=0.756, macro_f1=0.664
+2026-01-08 10:39:47 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1695 to 1.1630 (epoch 23)
+2026-01-08 10:39:47 src.training.training_loop INFO: Epoch 23: done!
+2026-01-08 10:39:47 src.training.training_loop INFO: Epoch 23: checkpoint saved
+2026-01-08 10:59:48 src.training.training_loop INFO: Epoch 24: train_loss=1.2496, train_acc=0.6693, train_acc_top3=0.7529, lr=5.87237e-05
+2026-01-08 10:59:50 src.training.training_loop INFO: Epoch 24: Validation: batches=300, samples=38400, val_loss=1.1594, val_acc=0.672, acc_top3=0.755, macro_f1=0.667
+2026-01-08 10:59:50 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1630 to 1.1594 (epoch 24)
+2026-01-08 10:59:50 src.training.training_loop INFO: Epoch 24: done!
+2026-01-08 10:59:50 src.training.training_loop INFO: Epoch 24: checkpoint saved
+2026-01-08 11:19:52 src.training.training_loop INFO: Epoch 25: train_loss=1.2452, train_acc=0.6704, train_acc_top3=0.7539, lr=5.52712e-05
+2026-01-08 11:19:55 src.training.training_loop INFO: Epoch 25: Validation: batches=300, samples=38400, val_loss=1.1618, val_acc=0.670, acc_top3=0.754, macro_f1=0.666
+2026-01-08 11:19:55 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (1/6)
+2026-01-08 11:19:55 src.training.training_loop INFO: Epoch 25: done!
+2026-01-08 11:19:55 src.training.training_loop INFO: Epoch 25: checkpoint saved
+2026-01-08 11:39:57 src.training.training_loop INFO: Epoch 26: train_loss=1.2413, train_acc=0.6714, train_acc_top3=0.7546, lr=5.17932e-05
+2026-01-08 11:40:00 src.training.training_loop INFO: Epoch 26: Validation: batches=300, samples=38400, val_loss=1.1558, val_acc=0.672, acc_top3=0.755, macro_f1=0.666
+2026-01-08 11:40:00 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1594 to 1.1558 (epoch 26)
+2026-01-08 11:40:00 src.training.training_loop INFO: Epoch 26: done!
+2026-01-08 11:40:00 src.training.training_loop INFO: Epoch 26: checkpoint saved
+2026-01-08 12:00:02 src.training.training_loop INFO: Epoch 27: train_loss=1.2373, train_acc=0.6723, train_acc_top3=0.7554, lr=4.83068e-05
+2026-01-08 12:00:05 src.training.training_loop INFO: Epoch 27: Validation: batches=300, samples=38400, val_loss=1.1554, val_acc=0.673, acc_top3=0.755, macro_f1=0.670
+2026-01-08 12:00:05 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1558 to 1.1554 (epoch 27)
+2026-01-08 12:00:05 src.training.training_loop INFO: Epoch 27: done!
+2026-01-08 12:00:05 src.training.training_loop INFO: Epoch 27: checkpoint saved
+2026-01-08 12:20:11 src.training.training_loop INFO: Epoch 28: train_loss=1.2338, train_acc=0.6732, train_acc_top3=0.7562, lr=4.48288e-05
+2026-01-08 12:20:14 src.training.training_loop INFO: Epoch 28: Validation: batches=300, samples=38400, val_loss=1.1496, val_acc=0.675, acc_top3=0.757, macro_f1=0.673
+2026-01-08 12:20:14 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1554 to 1.1496 (epoch 28)
+2026-01-08 12:20:14 src.training.training_loop INFO: Epoch 28: done!
+2026-01-08 12:20:14 src.training.training_loop INFO: Epoch 28: checkpoint saved
+2026-01-08 12:40:20 src.training.training_loop INFO: Epoch 29: train_loss=1.2305, train_acc=0.6740, train_acc_top3=0.7568, lr=4.13763e-05
+2026-01-08 12:40:23 src.training.training_loop INFO: Epoch 29: Validation: batches=300, samples=38400, val_loss=1.1447, val_acc=0.675, acc_top3=0.756, macro_f1=0.672
+2026-01-08 12:40:23 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1496 to 1.1447 (epoch 29)
+2026-01-08 12:40:23 src.training.training_loop INFO: Epoch 29: done!
+2026-01-08 12:40:23 src.training.training_loop INFO: Epoch 29: checkpoint saved
+2026-01-08 13:00:30 src.training.training_loop INFO: Epoch 30: train_loss=1.2277, train_acc=0.6746, train_acc_top3=0.7574, lr=3.7966e-05
+2026-01-08 13:00:33 src.training.training_loop INFO: Epoch 30: Validation: batches=300, samples=38400, val_loss=1.1420, val_acc=0.676, acc_top3=0.758, macro_f1=0.673
+2026-01-08 13:00:33 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1447 to 1.1420 (epoch 30)
+2026-01-08 13:00:33 src.training.training_loop INFO: Epoch 30: done!
+2026-01-08 13:00:33 src.training.training_loop INFO: Epoch 30: checkpoint saved
+2026-01-08 13:20:39 src.training.training_loop INFO: Epoch 31: train_loss=1.2249, train_acc=0.6753, train_acc_top3=0.7580, lr=3.46146e-05
+2026-01-08 13:20:41 src.training.training_loop INFO: Epoch 31: Validation: batches=300, samples=38400, val_loss=1.1391, val_acc=0.676, acc_top3=0.758, macro_f1=0.672
+2026-01-08 13:20:41 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1420 to 1.1391 (epoch 31)
+2026-01-08 13:20:41 src.training.training_loop INFO: Epoch 31: done!
+2026-01-08 13:20:41 src.training.training_loop INFO: Epoch 31: checkpoint saved
+2026-01-08 13:40:47 src.training.training_loop INFO: Epoch 32: train_loss=1.2223, train_acc=0.6761, train_acc_top3=0.7585, lr=3.13384e-05
+2026-01-08 13:40:50 src.training.training_loop INFO: Epoch 32: Validation: batches=300, samples=38400, val_loss=1.1391, val_acc=0.678, acc_top3=0.759, macro_f1=0.677
+2026-01-08 13:40:50 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1391 to 1.1391 (epoch 32)
+2026-01-08 13:40:50 src.training.training_loop INFO: Epoch 32: done!
+2026-01-08 13:40:50 src.training.training_loop INFO: Epoch 32: checkpoint saved
+2026-01-08 14:00:40 src.training.training_loop INFO: Epoch 33: train_loss=1.2199, train_acc=0.6767, train_acc_top3=0.7591, lr=2.81534e-05
+2026-01-08 14:00:43 src.training.training_loop INFO: Epoch 33: Validation: batches=300, samples=38400, val_loss=1.1348, val_acc=0.677, acc_top3=0.759, macro_f1=0.676
+2026-01-08 14:00:43 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1391 to 1.1348 (epoch 33)
+2026-01-08 14:00:43 src.training.training_loop INFO: Epoch 33: done!
+2026-01-08 14:00:43 src.training.training_loop INFO: Epoch 33: checkpoint saved
+2026-01-08 14:19:08 src.training.training_loop INFO: Epoch 34: train_loss=1.2180, train_acc=0.6771, train_acc_top3=0.7595, lr=2.5075e-05
+2026-01-08 14:19:10 src.training.training_loop INFO: Epoch 34: Validation: batches=300, samples=38400, val_loss=1.1348, val_acc=0.678, acc_top3=0.759, macro_f1=0.674
+2026-01-08 14:19:10 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1348 to 1.1348 (epoch 34)
+2026-01-08 14:19:10 src.training.training_loop INFO: Epoch 34: done!
+2026-01-08 14:19:10 src.training.training_loop INFO: Epoch 34: checkpoint saved
+2026-01-08 14:37:38 src.training.training_loop INFO: Epoch 35: train_loss=1.2158, train_acc=0.6776, train_acc_top3=0.7599, lr=2.21183e-05
+2026-01-08 14:37:40 src.training.training_loop INFO: Epoch 35: Validation: batches=300, samples=38400, val_loss=1.1305, val_acc=0.679, acc_top3=0.760, macro_f1=0.677
+2026-01-08 14:37:40 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1348 to 1.1305 (epoch 35)
+2026-01-08 14:37:40 src.training.training_loop INFO: Epoch 35: done!
+2026-01-08 14:37:40 src.training.training_loop INFO: Epoch 35: checkpoint saved
+2026-01-08 14:56:09 src.training.training_loop INFO: Epoch 36: train_loss=1.2141, train_acc=0.6782, train_acc_top3=0.7602, lr=1.92977e-05
+2026-01-08 14:56:12 src.training.training_loop INFO: Epoch 36: Validation: batches=300, samples=38400, val_loss=1.1339, val_acc=0.678, acc_top3=0.760, macro_f1=0.677
+2026-01-08 14:56:12 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (1/6)
+2026-01-08 14:56:12 src.training.training_loop INFO: Epoch 36: done!
+2026-01-08 14:56:12 src.training.training_loop INFO: Epoch 36: checkpoint saved
+2026-01-08 15:14:44 src.training.training_loop INFO: Epoch 37: train_loss=1.2124, train_acc=0.6785, train_acc_top3=0.7605, lr=1.66269e-05
+2026-01-08 15:14:46 src.training.training_loop INFO: Epoch 37: Validation: batches=300, samples=38400, val_loss=1.1302, val_acc=0.680, acc_top3=0.760, macro_f1=0.678
+2026-01-08 15:14:46 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1305 to 1.1302 (epoch 37)
+2026-01-08 15:14:46 src.training.training_loop INFO: Epoch 37: done!
+2026-01-08 15:14:46 src.training.training_loop INFO: Epoch 37: checkpoint saved
+2026-01-08 15:33:19 src.training.training_loop INFO: Epoch 38: train_loss=1.2109, train_acc=0.6789, train_acc_top3=0.7609, lr=1.4119e-05
+2026-01-08 15:33:21 src.training.training_loop INFO: Epoch 38: Validation: batches=300, samples=38400, val_loss=1.1288, val_acc=0.680, acc_top3=0.760, macro_f1=0.678
+2026-01-08 15:33:21 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1302 to 1.1288 (epoch 38)
+2026-01-08 15:33:21 src.training.training_loop INFO: Epoch 38: done!
+2026-01-08 15:33:21 src.training.training_loop INFO: Epoch 38: checkpoint saved
+2026-01-08 15:51:56 src.training.training_loop INFO: Epoch 39: train_loss=1.2097, train_acc=0.6793, train_acc_top3=0.7612, lr=1.17861e-05
+2026-01-08 15:51:59 src.training.training_loop INFO: Epoch 39: Validation: batches=300, samples=38400, val_loss=1.1306, val_acc=0.678, acc_top3=0.760, macro_f1=0.678
+2026-01-08 15:51:59 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (1/6)
+2026-01-08 15:51:59 src.training.training_loop INFO: Epoch 39: done!
+2026-01-08 15:51:59 src.training.training_loop INFO: Epoch 39: checkpoint saved
+2026-01-08 16:10:35 src.training.training_loop INFO: Epoch 40: train_loss=1.2085, train_acc=0.6796, train_acc_top3=0.7613, lr=9.6396e-06
+2026-01-08 16:10:37 src.training.training_loop INFO: Epoch 40: Validation: batches=300, samples=38400, val_loss=1.1281, val_acc=0.680, acc_top3=0.761, macro_f1=0.678
+2026-01-08 16:10:37 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1288 to 1.1281 (epoch 40)
+2026-01-08 16:10:37 src.training.training_loop INFO: Epoch 40: done!
+2026-01-08 16:10:37 src.training.training_loop INFO: Epoch 40: checkpoint saved
+2026-01-08 16:29:12 src.training.training_loop INFO: Epoch 41: train_loss=1.2074, train_acc=0.6799, train_acc_top3=0.7616, lr=7.69e-06
+2026-01-08 16:29:15 src.training.training_loop INFO: Epoch 41: Validation: batches=300, samples=38400, val_loss=1.1274, val_acc=0.680, acc_top3=0.761, macro_f1=0.679
+2026-01-08 16:29:15 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1281 to 1.1274 (epoch 41)
+2026-01-08 16:29:15 src.training.training_loop INFO: Epoch 41: done!
+2026-01-08 16:29:15 src.training.training_loop INFO: Epoch 41: checkpoint saved
+2026-01-08 16:47:51 src.training.training_loop INFO: Epoch 42: train_loss=1.2067, train_acc=0.6799, train_acc_top3=0.7617, lr=5.94677e-06
+2026-01-08 16:47:54 src.training.training_loop INFO: Epoch 42: Validation: batches=300, samples=38400, val_loss=1.1255, val_acc=0.680, acc_top3=0.762, macro_f1=0.679
+2026-01-08 16:47:54 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1274 to 1.1255 (epoch 42)
+2026-01-08 16:47:54 src.training.training_loop INFO: Epoch 42: done!
+2026-01-08 16:47:54 src.training.training_loop INFO: Epoch 42: checkpoint saved
+2026-01-08 17:06:26 src.training.training_loop INFO: Epoch 43: train_loss=1.2059, train_acc=0.6802, train_acc_top3=0.7619, lr=4.4184e-06
+2026-01-08 17:06:28 src.training.training_loop INFO: Epoch 43: Validation: batches=300, samples=38400, val_loss=1.1254, val_acc=0.681, acc_top3=0.761, macro_f1=0.680
+2026-01-08 17:06:28 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1255 to 1.1254 (epoch 43)
+2026-01-08 17:06:28 src.training.training_loop INFO: Epoch 43: done!
+2026-01-08 17:06:28 src.training.training_loop INFO: Epoch 43: checkpoint saved
+2026-01-08 17:24:58 src.training.training_loop INFO: Epoch 44: train_loss=1.2053, train_acc=0.6803, train_acc_top3=0.7620, lr=3.11235e-06
+2026-01-08 17:25:01 src.training.training_loop INFO: Epoch 44: Validation: batches=300, samples=38400, val_loss=1.1244, val_acc=0.681, acc_top3=0.761, macro_f1=0.679
+2026-01-08 17:25:01 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1254 to 1.1244 (epoch 44)
+2026-01-08 17:25:01 src.training.training_loop INFO: Epoch 44: done!
+2026-01-08 17:25:01 src.training.training_loop INFO: Epoch 44: checkpoint saved
+2026-01-08 17:43:31 src.training.training_loop INFO: Epoch 45: train_loss=1.2049, train_acc=0.6804, train_acc_top3=0.7620, lr=2.03498e-06
+2026-01-08 17:43:34 src.training.training_loop INFO: Epoch 45: Validation: batches=300, samples=38400, val_loss=1.1239, val_acc=0.681, acc_top3=0.761, macro_f1=0.679
+2026-01-08 17:43:34 src.training.training_loop INFO: Early stopping metric 'val_loss' decreased from 1.1244 to 1.1239 (epoch 45)
+2026-01-08 17:43:34 src.training.training_loop INFO: Epoch 45: done!
+2026-01-08 17:43:34 src.training.training_loop INFO: Epoch 45: checkpoint saved
+2026-01-08 18:03:28 src.training.training_loop INFO: Epoch 46: train_loss=1.2046, train_acc=0.6805, train_acc_top3=0.7622, lr=1.19153e-06
+2026-01-08 18:03:30 src.training.training_loop INFO: Epoch 46: Validation: batches=300, samples=38400, val_loss=1.1245, val_acc=0.681, acc_top3=0.761, macro_f1=0.680
+2026-01-08 18:03:30 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (1/6)
+2026-01-08 18:03:30 src.training.training_loop INFO: Epoch 46: done!
+2026-01-08 18:03:30 src.training.training_loop INFO: Epoch 46: checkpoint saved
+2026-01-08 18:23:39 src.training.training_loop INFO: Epoch 47: train_loss=1.2043, train_acc=0.6806, train_acc_top3=0.7622, lr=5.8611e-07
+2026-01-08 18:23:42 src.training.training_loop INFO: Epoch 47: Validation: batches=300, samples=38400, val_loss=1.1240, val_acc=0.681, acc_top3=0.762, macro_f1=0.679
+2026-01-08 18:23:42 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (2/6)
+2026-01-08 18:23:42 src.training.training_loop INFO: Epoch 47: done!
+2026-01-08 18:23:42 src.training.training_loop INFO: Epoch 47: checkpoint saved
+2026-01-08 18:42:29 src.training.training_loop INFO: Epoch 48: train_loss=1.2041, train_acc=0.6806, train_acc_top3=0.7622, lr=2.21676e-07
+2026-01-08 18:42:31 src.training.training_loop INFO: Epoch 48: Validation: batches=300, samples=38400, val_loss=1.1240, val_acc=0.681, acc_top3=0.762, macro_f1=0.680
+2026-01-08 18:42:31 src.training.training_loop INFO: Early stopping metric 'val_loss' not improved (3/6)
+2026-01-08 18:42:31 src.training.training_loop INFO: Epoch 48: done!
+2026-01-08 18:42:31 src.training.training_loop INFO: Epoch 48: checkpoint saved
+2026-01-08 18:43:22 __main__ INFO: Full test accuracy: 0.679 (batches=6000, samples=768000, loss=1.1310, top3=0.761, macro_f1=0.678)
+2026-01-08 18:43:22 __main__ INFO: Learning curve plots saved: learning_curve_loss.png, learning_curve_accuracy.png, learning_curve_top3.png, learning_curve_lr.png
+2026-01-08 18:43:23 __main__ INFO: summarize_results.py stdout:
+✅ 集計結果を /home/kata/fifty-nlp/result/summary_results.csv に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_accuracy.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_loss.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_lr.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_top3.png に出力しました。
+2026-01-08 19:38:11 __main__ INFO: config.type: gru
+2026-01-08 19:38:11 __main__ INFO: 
+device: cuda (cuda)
+2026-01-08 19:38:11 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-08 19:38:11 __main__ INFO: resume_checkpoint: /home/kata/fifty-nlp/result/LSTM/2026-01-08_02-13-25_7fb0b54/checkpoint_latest.pt
+2026-01-08 19:38:11 __main__ ERROR: Fatal error occurred: チェックポイントの run_type (lstm) と 現在の設定 (gru) が一致しません
+Traceback (most recent call last):
+  File "/home/kata/fifty-nlp/src/main.py", line 1962, in <module>
+    main(device=resolved_device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1949, in main
+    run_single_experiment(run_type, device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1781, in run_single_experiment
+    resume_state = load_resume_state(
+                   ^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/src/main.py", line 305, in load_resume_state
+    raise ValueError(
+ValueError: チェックポイントの run_type (lstm) と 現在の設定 (gru) が一致しません
+2026-01-08 19:38:12 __main__ INFO: summarize_results.py stdout:
+✅ 集計結果を /home/kata/fifty-nlp/result/summary_results.csv に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_accuracy.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_loss.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_lr.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_top3.png に出力しました。
+2026-01-22 23:40:57 __main__ INFO: config.type: lstm
+2026-01-22 23:40:57 __main__ INFO: 
+device: cuda (cuda)
+2026-01-22 23:40:57 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/../docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-22 23:40:57 __main__ INFO: resume_checkpoint: /home/kata/fifty-nlp/result/../docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/checkpoint_latest.pt
+2026-01-22 23:40:57 __main__ INFO: Resuming from epoch 48(checkpoint saved at 2026-01-08T18:42:31)
+2026-01-22 23:40:57 config.training_config INFO: batch_size: 128
+2026-01-22 23:40:57 config.training_config INFO: epochs: 48
+2026-01-22 23:40:57 config.training_config INFO: lr: 0.001
+2026-01-22 23:40:57 config.training_config INFO: optimizer: rmsprop
+2026-01-22 23:40:57 config.training_config INFO: scheduler: none
+2026-01-22 23:40:57 config.training_config INFO: warmup_epochs: 0
+2026-01-22 23:40:57 config.training_config INFO: warmup_start_factor: 0.1
+2026-01-22 23:40:57 config.training_config INFO: n_classes: 75
+2026-01-22 23:40:57 config.training_config INFO: n_subset: 6144000
+2026-01-22 23:40:57 config.training_config INFO: eta_min: 1e-07
+2026-01-22 23:40:57 config.training_config INFO: val_interval: 1
+2026-01-22 23:40:57 config.training_config INFO: phase: final
+2026-01-22 23:40:57 config.training_config INFO: val_max_batches: None
+2026-01-22 23:40:57 config.training_config INFO: val_subset_ratio: None
+2026-01-22 23:40:57 config.training_config INFO: val_subset_seed: 42
+2026-01-22 23:40:57 config.training_config INFO: weight_decay: 0.0
+2026-01-22 23:40:57 config.training_config INFO: clip_grad_norm: None
+2026-01-22 23:40:57 config.training_config INFO: label_smoothing: 0.0
+2026-01-22 23:40:57 config.training_config INFO: debug_cuda_sync: False
+2026-01-22 23:40:57 config.training_config INFO: early_stopping: metric=val_acc mode=max patience=3 min_delta=0.01 restore_best=True
+2026-01-22 23:40:57 __main__ INFO: jpeg_label_id: 0 (scenario=1, source=/home/kata/fifty-nlp/dataset/classes_Human-readable_labels.json)
+2026-01-22 23:40:57 __main__ INFO: n_subset: 6144000
+2026-01-22 23:40:57 __main__ INFO: parameter_scale: 288535
+2026-01-22 23:40:57 __main__ INFO: trainable_parameters: 288535
+2026-01-22 23:40:58 __main__ ERROR: run_type=lstm の学習でエラーが発生しました
+Traceback (most recent call last):
+  File "/home/kata/fifty-nlp/src/main.py", line 2195, in main
+    run_single_experiment(run_type, device)
+  File "/home/kata/fifty-nlp/src/main.py", line 1985, in run_single_experiment
+    load_checkpoint(
+  File "/home/kata/fifty-nlp/src/main.py", line 1147, in load_checkpoint
+    scheduler.load_state_dict(checkpoint["scheduler_state"])
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 370, in load_state_dict
+    lr_lambdas = state_dict.pop("lr_lambdas")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'lr_lambdas'
+2026-01-22 23:41:01 __main__ ERROR: Post-run command failed (git pull) exit=1
+2026-01-22 23:41:01 __main__ ERROR: Post-run stderr (git pull): ERROR: no healthy upstream
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-01-22 23:41:01 __main__ ERROR: Post-run command failed (git commit -m "add: ➕️ LSTM のログ追加") exit=1
+2026-01-22 23:41:01 __main__ ERROR: Post-run stdout (git commit -m "add: ➕️ LSTM のログ追加"): ブランチ main
+Your branch and 'origin/main' have diverged,
+and have 3 and 3 different commits each, respectively.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   config/config.yml
+	modified:   docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/log.txt
+	modified:   docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/log.txt
+
+追跡されていないファイル:
+  (use "git add <file>..." to include in what will be committed)
+	docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/label_map.json
+	docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/label_map.json
+	docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/label_map.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+2026-01-22 23:41:03 __main__ ERROR: Post-run command failed (git push) exit=1
+2026-01-22 23:41:03 __main__ ERROR: Post-run stderr (git push): To github.com:rayfiyo/fifty-nlp.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:rayfiyo/fifty-nlp.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+2026-01-22 23:41:05 __main__ INFO: summarize_results.py stdout:
+✅ 集計結果を /home/kata/fifty-nlp/result/summary_results.csv に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_accuracy.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_loss.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_lr.png に出力しました。
+✅ 学習曲線を /home/kata/fifty-nlp/result/summary_learning_curve_top3.png に出力しました。
+2026-01-23 08:10:57 __main__ INFO: config.type: lstm
+2026-01-23 08:10:57 __main__ INFO: 
+device: cuda (cuda)
+2026-01-23 08:10:57 __main__ INFO: run_dir: /home/kata/fifty-nlp/result/../docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54
+2026-01-23 08:10:57 __main__ INFO: resume_checkpoint: /home/kata/fifty-nlp/result/../docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/checkpoint_latest.pt
+2026-01-23 08:10:57 __main__ INFO: Resuming from epoch 48(checkpoint saved at 2026-01-08T18:42:31)
+2026-01-23 08:10:57 config.training_config INFO: batch_size: 128
+2026-01-23 08:10:57 config.training_config INFO: epochs: 0
+2026-01-23 08:10:57 config.training_config INFO: lr: 0.001
+2026-01-23 08:10:57 config.training_config INFO: optimizer: adamw
+2026-01-23 08:10:57 config.training_config INFO: scheduler: cosine
+2026-01-23 08:10:57 config.training_config INFO: warmup_epochs: 0
+2026-01-23 08:10:57 config.training_config INFO: warmup_start_factor: 0.1
+2026-01-23 08:10:57 config.training_config INFO: n_classes: 75
+2026-01-23 08:10:57 config.training_config INFO: n_subset: 6144000
+2026-01-23 08:10:57 config.training_config INFO: eta_min: 1e-07
+2026-01-23 08:10:57 config.training_config INFO: val_interval: 1
+2026-01-23 08:10:57 config.training_config INFO: phase: final
+2026-01-23 08:10:57 config.training_config INFO: val_max_batches: None
+2026-01-23 08:10:57 config.training_config INFO: val_subset_ratio: None
+2026-01-23 08:10:57 config.training_config INFO: val_subset_seed: 42
+2026-01-23 08:10:57 config.training_config INFO: weight_decay: 0.0
+2026-01-23 08:10:57 config.training_config INFO: clip_grad_norm: None
+2026-01-23 08:10:57 config.training_config INFO: label_smoothing: 0.0
+2026-01-23 08:10:57 config.training_config INFO: debug_cuda_sync: False
+2026-01-23 08:10:57 config.training_config INFO: amp: True
+2026-01-23 08:10:57 config.training_config INFO: early_stopping: metric=val_acc mode=max patience=6 min_delta=0.0006 restore_best=True
+2026-01-23 08:10:57 __main__ INFO: jpeg_label_id: 0 (scenario=1, source=/home/kata/fifty-nlp/dataset/classes_Human-readable_labels.json)
+2026-01-23 08:10:57 __main__ INFO: n_subset: 6144000
+2026-01-23 08:10:57 __main__ INFO: parameter_scale: 288535
+2026-01-23 08:10:57 __main__ INFO: trainable_parameters: 288535
+2026-01-23 08:10:58 src.training.training_loop INFO: チェックポイントのエポック数が学習回数に到達しているため、追加学習はスキップします
+2026-01-23 08:11:58 src.training.training_loop INFO: Saved confusion matrix: /home/kata/fifty-nlp/result/../docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/confusion_matrix.npy
+2026-01-23 08:11:58 __main__ INFO: Full test accuracy: 0.679 (batches=6000, samples=768000, loss=1.1310, top3=0.761, macro_f1=0.678, jpeg_acc=0.896 (support=10182))
+2026-01-23 08:11:58 __main__ INFO: Learning curve plots saved: learning_curve_loss.png, learning_curve_accuracy.png, learning_curve_top3.png, learning_curve_lr.png
+2026-01-23 08:12:01 __main__ INFO: Post-run stdout (git pull): Already up to date.
+2026-01-23 08:12:01 __main__ ERROR: Post-run command failed (git commit -m "add: ➕️ LSTM のログ追加") exit=1
+2026-01-23 08:12:01 __main__ ERROR: Post-run stdout (git commit -m "add: ➕️ LSTM のログ追加"): ブランチ main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   config/config.yml
+	modified:   docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/log.txt
+	modified:   docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/log.txt
+	modified:   docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/log.txt
+
+追跡されていないファイル:
+  (use "git add <file>..." to include in what will be committed)
+	docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/confusion_matrix.npy
+	docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/per_class_f1_bottom10.csv
+	docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/per_class_metrics.csv
+	docs/result_01_論文向けの調整前/CNN/2026-01-07_22-36-44_7fb0b54/top_confusion_pairs.csv
+	docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/confusion_matrix.npy
+	docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/per_class_f1_bottom10.csv
+	docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/per_class_metrics.csv
+	docs/result_01_論文向けの調整前/GRU/2026-01-15_22-13-06_e08e82e/top_confusion_pairs.csv
+	docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/confusion_matrix.npy
+	docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/per_class_f1_bottom10.csv
+	docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/per_class_metrics.csv
+	docs/result_01_論文向けの調整前/LSTM/2026-01-08_02-13-25_7fb0b54/top_confusion_pairs.csv
+
+no changes added to commit (use "git add" and/or "git commit -a")
+2026-01-23 08:12:03 __main__ INFO: Post-run stderr (git push): Everything up-to-date
+2026-01-23 08:12:04 __main__ WARNING: summarize_results.py stderr:
+Traceback (most recent call last):
+  File "/home/kata/fifty-nlp/src/utils/summarize_results.py", line 660, in <module>
+    main()
+  File "/home/kata/fifty-nlp/src/utils/summarize_results.py", line 614, in main
+    record, df = _extract_run(model, run_dir)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/src/utils/summarize_results.py", line 332, in _extract_run
+    best_epoch, val_metrics = _select_best_validation(df)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/src/utils/summarize_results.py", line 311, in _select_best_validation
+    idx = df["val_acc"].idxmax()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/pandas/core/series.py", line 2770, in idxmax
+    i = self.argmax(axis, skipna, *args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/pandas/core/base.py", line 755, in argmax
+    result = nanops.nanargmax(delegate, skipna=skipna)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kata/fifty-nlp/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 1148, in nanargmax
+    result = values.argmax(axis)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: attempt to get argmax of an empty sequence
+2026-01-23 08:12:04 __main__ ERROR: summarize_results.py が非ゼロ終了コード (1) を返しました

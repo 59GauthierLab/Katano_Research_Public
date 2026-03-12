@@ -1,0 +1,5 @@
+Model,RunDir,Timestamp,BestEpoch,Parameters,ValTop1,ValTop3,ValLoss,ValMacroF1,TestTop1,TestTop3,TestLoss,TestMacroF1
+CNN,CNN/2026-01-27_07-07-43_691b54d,2026-01-27 07:07:43,48,"batch_size=128, epochs=48, lr=0.001, weight_decay=1e-06, label_smoothing=0, clip_grad_norm=0.5, eta_min=1e-07, val_interval=1, n_subset=6.144e+06",0.6698,0.7515,1.1747,0.6663,0.6690,0.7510,1.1773,0.6660
+LSTM,LSTM/2026-01-08_02-13-25_7fb0b54,2026-01-08 02:13:25,46,"batch_size=128, epochs=0, lr=0.001, weight_decay=0, label_smoothing=0, clip_grad_norm=None, eta_min=1e-07, val_interval=1, n_subset=6.144e+06",0.6810,0.7615,1.1245,0.6796,0.6790,0.7610,1.1310,0.6780
+GRU,GRU/2026-01-15_22-13-06_e08e82e,2026-01-15 22:13:06,48,"batch_size=128, epochs=0, lr=0.001, weight_decay=0, label_smoothing=0, clip_grad_norm=None, eta_min=1e-07, val_interval=1, n_subset=6.144e+06",0.7027,0.7805,1.0435,0.7035,0.7010,0.7790,1.0520,0.7030
+TRANSFORMER,Transformer/2026-01-09_08-50-51_cce2c79,2026-01-09 08:50:51,41,"batch_size=128, epochs=0, lr=0.001, weight_decay=0, label_smoothing=0, clip_grad_norm=None, eta_min=1e-07, val_interval=1, n_subset=6.144e+06",0.6823,0.7627,1.1481,0.6811,0.6810,0.7600,1.1634,0.6780
